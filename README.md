@@ -16,7 +16,7 @@
  - `Data.spec.js` : vue 로컬에 있는 data를 중점적으로 테스팅합니다. 
  - `Props.spec.js` : 부모 컴포넌트로 받은 props를 중점적으로 테스팅합니다. 
  - `Vuex.spec.js` : Vuex의 mutation, actions를 위주로 테스팅합니다. 
-
+이렇게 하고.. 
 ### 왜 모카일까? 
 
 ### Chail 간략한 설명
