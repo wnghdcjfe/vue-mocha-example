@@ -1,5 +1,5 @@
 # mocha-test
-모카 - vue.js 테스트 코드들을 쌓아 놓는 공간입니다.  
+모카 X vue.js 테스트 코드들을 쌓아 놓는 공간입니다.  
 
 ## 명령어
  - Project setup : `npm install`
@@ -12,10 +12,9 @@
  - `src/*` : 실제 소스들이 들어갑니다. 
 
 ### 테스팅 파일 설명
- - `Ui.spec.js` : UI테스트, 버튼클릭, 스크롤 등을 테스팅합니다.
- - `Data.spec.js` : vue 로컬에 있는 data를 중점적으로 테스팅합니다. 
- - `Props.spec.js` : 부모 컴포넌트로 받은 props를 중점적으로 테스팅합니다. 
- - `Vuex.spec.js` : Vuex의 mutation, actions를 위주로 테스팅합니다. 
+ - `UI.spec.js` : UI테스팅
+ - `example.spec.js`, `Props.spec.js` : 부모 컴포넌트로 받은 props 관련 테스팅 
+ - `route.spec.js` : 라우팅매핑에 관해 테스팅
 
 ### Jest
 jest는 스냅샷테스트, 모킹의 유리합니다. 모킹이란 가짜함수라는 뜻으로 가짜 함수를 만들어 mockReturnValue을 통해 return값을 정하던가 mockResolvedValue를 통해 가짜 비동기 함수를 만들 수 있습니다. 이를 통해 실제Production의 객체나 DB를 사용하는 부담을 덜수가 있습니다. 예를 들어 테스트를 위해 DB 트랜젝션, 쿼리, 가짜 객체를 생성하는 것보다 훨씬 낫죠. 그리고 외부환경에 의존하지 않고도 독립적인 실행가능한 테스트를 작성할 수 있습니다. 또한 spyOn을 통해 해당 함수의 호출여부와 어떻게 호출되었는지를 알 수 있습니다.
@@ -29,8 +28,7 @@ jest는 스냅샷테스트, 모킹의 유리합니다. 모킹이란 가짜함수
  - `expect('foo').to.be.a('string'); / expect({a: 1}).to.be.an ('object');` : type 비교
  
 
-### BDD 와 TDD
-**kt BDD가 아닙니다.**
+### BDD 와 TDD 
  - BDD(Behaviour-Driven Development) 비즈니스 요구사항 시나리오를 기반, 특정 기능에 초점을 맞춤(TDD에 이어서 나옴), describe - it - should 인터페이스
  - TDD(Test-Driven Development) 테스트 자체에 집중, low-level (단위테스트), suit - test 인터페이스
 
